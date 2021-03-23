@@ -12,5 +12,27 @@ namespace lab1
         private LinkedListNode<T> tail;
 
         private int count;
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
+
+        public bool Empty
+        {
+            get
+            {
+                return count == 0;
+            }
+        }
+        public LinkedListNode<T> First
+        {
+            get
+            {
+                return head;
+            }
+        }
     }
 }

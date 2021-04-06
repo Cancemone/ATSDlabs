@@ -34,7 +34,7 @@ namespace lab1
                 return head;
             }
         }
-        public LinkedList()
+        public LinkedListClass()
         {
 
         }
@@ -122,7 +122,7 @@ namespace lab1
 
             return prevNode;
         }
-        public void ListEqual(LinkedList<T> L2)
+        public void ListEqual(LinkedListClass<T> L2)
         {
             LinkedListNode<T> current1 = head;
             LinkedListNode<T> current2 = L2.head;

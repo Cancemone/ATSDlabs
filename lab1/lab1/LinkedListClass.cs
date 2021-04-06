@@ -109,5 +109,18 @@ namespace lab1
                 }
             }
         }
+        public LinkedListNode<T> FindPrevNode(LinkedListNode<T> node)
+        {
+            LinkedListNode<T> prevNode = null;
+            LinkedListNode<T> currentNode = head;
+
+            while (currentNode != null)
+            {
+                prevNode = currentNode;
+                currentNode = currentNode.Next;
+            }
+
+            return prevNode;
+        }
     }
 }

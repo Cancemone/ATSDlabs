@@ -153,5 +153,18 @@ namespace lab1
             }
             Console.WriteLine();
         }
+        public void Add(T value)
+        {
+            if (head == null)
+            {
+                head = tail = new LinkedListNode<T>(value, null);
+                count++;
+            }
+            else
+            {
+                AddAfter(tail, value);
+                tail = tail.Next;
+            }
+        }
     }
 }

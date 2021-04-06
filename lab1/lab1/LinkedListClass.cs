@@ -122,5 +122,26 @@ namespace lab1
 
             return prevNode;
         }
+        public void ListEqual(LinkedList<T> L2)
+        {
+            LinkedListNode<T> current1 = head;
+            LinkedListNode<T> current2 = L2.head;
+            if (count.CompareTo(L2.count) == 0)
+            {
+
+                while (current1 != null)
+                {
+                    if (current1.Value.CompareTo(current2.Value) != 0)
+                    {
+                        Console.WriteLine("Lists are diffrent");
+                        break;
+                    }
+                    current1 = current1.Next;
+                    current2 = current2.Next;
+                }
+                PrintList();
+                L2.PrintList();
+            }
+        }
     }
 }

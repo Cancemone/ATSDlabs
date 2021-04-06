@@ -77,5 +77,16 @@ namespace lab1
                 }
             }
         }
+        public void RemoveAfter(LinkedListNode<T> node)
+        {
+            LinkedListNode<T> removedNode = node.Next;
+            node.Next = removedNode.Next;
+            removedNode.Next = null;
+            if (removedNode == tail)
+            {
+                tail = node;
+            }
+            count--;
+        }
     }
 }

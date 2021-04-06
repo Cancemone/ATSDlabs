@@ -166,5 +166,16 @@ namespace lab1
                 tail = tail.Next;
             }
         }
+        public LinkedListNode<T> Search(T value)
+        {
+            LinkedListNode<T> current = head;
+            while (current != null)
+            {
+                if (current.Value.CompareTo(value) == 0)
+                    return current;
+                current = current.Next;
+            }
+            return null;
+        }
     }
 }

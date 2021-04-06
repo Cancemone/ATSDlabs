@@ -143,5 +143,15 @@ namespace lab1
                 L2.PrintList();
             }
         }
+        public void PrintList()
+        {
+            LinkedListNode<T> current = head;
+            while (current != null)
+            {
+                Console.Write(current.Value + " ");
+                current = current.Next;
+            }
+            Console.WriteLine();
+        }
     }
 }

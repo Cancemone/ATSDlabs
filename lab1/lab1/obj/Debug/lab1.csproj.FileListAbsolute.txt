@@ -1,0 +1,2 @@
+E:\Atsd labs git\lab1\lab1\obj\Debug\lab1.csprojAssemblyReference.cache
+E:\Atsd labs git\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache

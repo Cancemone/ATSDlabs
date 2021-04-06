@@ -10,6 +10,9 @@ namespace lab1
     {
         static void Main(string[] args)
         {
+            LinkedList<int> numberList = new LinkedList<int>();
+            LinkedList<int> numberList2 = new LinkedList<int>();
+            numberList.AddSort(15);
         }
     }
 }

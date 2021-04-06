@@ -34,5 +34,15 @@ namespace lab1
                 return head;
             }
         }
+        public LinkedList()
+        {
+
+        }
+        public void AddAfter(LinkedListNode<T> node, T value)
+        {
+            LinkedListNode<T> newNode = new LinkedListNode<T>(value, node);
+            node.Next = newNode;
+            count++;
+        }
     }
 }

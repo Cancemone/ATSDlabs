@@ -44,5 +44,38 @@ namespace lab1
             node.Next = newNode;
             count++;
         }
+        public void AddSort(T value)
+        {
+            if (head == null)
+            {
+                head = tail = new LinkedListNode<T>(value, null);
+                count++;
+            }
+            else
+            {
+                LinkedListNode<T> current = head;
+                while (current != null)
+                {
+                    if (value.CompareTo(current.Value) >= 0 && value.CompareTo(current.Next.Value) <= 0)
+                    {
+                        AddAfter(current, value);
+                        break;
+                    }
+                    else if (value.CompareTo(head.Value) <= 0)
+                    {
+                        LinkedListNode<T> oldHead = head;
+                        head = new LinkedListNode<T>(value, oldHead);
+                        count++;
+                        break;
+                    }
+                    else if (value.CompareTo(tail.Value) >= 0)
+                    {
+                        AddAfter(tail, value);
+                        break;
+                    }
+                    current = current.Next;
+                }
+            }
+        }
     }
 }

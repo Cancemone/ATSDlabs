@@ -72,5 +72,12 @@ namespace lab3
                 else break;
             }
         }
+        private void HeapMake(T[] array, int n)
+        {
+            for (int i = n - 1; i >= 0; i--)
+            {
+                Heapify(array, i, n);
+            }
+        }
     }
 }

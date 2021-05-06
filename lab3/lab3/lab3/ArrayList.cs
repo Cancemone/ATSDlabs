@@ -25,5 +25,9 @@ namespace lab3
         {
             return last == -1;
         }
+        public int Size()
+        {
+            return array.Length;
+        }
     }
 }

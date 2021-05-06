@@ -44,5 +44,13 @@ namespace lab3
             }
             array = array2;
         }
+        public void PrintList()
+        {
+            for (int i = 0; i <= last; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+        }
     }
 }

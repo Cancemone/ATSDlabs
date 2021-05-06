@@ -79,5 +79,19 @@ namespace lab3
                 Heapify(array, i, n);
             }
         }
+        public void HeapSort()
+        {
+            T temp;
+            var n = last + 1;
+            HeapMake(array, n);
+            while (n > 0)
+            {
+                temp = array[0];
+                array[0] = array[n - 1];
+                array[n - 1] = temp;
+                n--;
+                Heapify(array, 0, n);
+            }
+        }
     }
 }

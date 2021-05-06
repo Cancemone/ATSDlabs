@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace lab3
 {
-    class ArrayList
+    class ArrayList<T> where T : IComparable
     {
+        public T[] array;
+        public int max;
+        int last;
+        public ArrayList(int m = 10)
+        {
+            max = m;
+            array = new T[max];
+            last = -1;
+        }
     }
 }

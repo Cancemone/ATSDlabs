@@ -21,5 +21,9 @@ namespace lab3
         {
             return last >= array.Length - 1;
         }
+        public bool IsEmpty()
+        {
+            return last == -1;
+        }
     }
 }

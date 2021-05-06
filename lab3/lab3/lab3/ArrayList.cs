@@ -17,5 +17,9 @@ namespace lab3
             array = new T[max];
             last = -1;
         }
+        public bool IsFull()
+        {
+            return last >= array.Length - 1;
+        }
     }
 }

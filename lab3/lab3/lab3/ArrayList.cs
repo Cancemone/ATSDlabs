@@ -29,5 +29,11 @@ namespace lab3
         {
             return array.Length;
         }
+        public void AddItem(T item)
+        {
+            if (IsFull()) Resize(ref array, array.Length + 1);
+            array[++last] = item;
+
+        }
     }
 }

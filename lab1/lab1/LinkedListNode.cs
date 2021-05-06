@@ -9,9 +9,15 @@ namespace lab1
     class LinkedListNode<T>
     {
         //значение в узле списка
-        public T Value;
+        public T Value
+        {
+            get; set;
+        }
         //следующий узел
-        public LinkedListNode<T> Next;
+        public LinkedListNode<T> Next
+        {
+            get; set;
+        }
         //constructor
         public LinkedListNode(T value, LinkedListNode<T> next = null)
         {

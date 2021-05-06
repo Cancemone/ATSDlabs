@@ -143,6 +143,68 @@ namespace lab1
                 L2.PrintList();
             }
         }
+        public void TheBiggest(LinkedListClass<T> L2, LinkedListClass<T> L3)
+        {
+            LinkedListNode<T> current1 = head;
+            LinkedListNode<T> current2 = L2.head;
+            LinkedListNode<T> current3 = L3.head;
+            int count1=0,count2=0, count3=0;
+            int tmp1, tmp2;
+            LinkedListClass<T> max;
+            while (current1.Next != null)
+            {
+                tmp1 = Convert.ToInt32(current1.Value);
+                tmp2 = Convert.ToInt32(current1.Next.Value);
+                if (tmp2 - tmp1 == 1)
+                {
+                    count1++;
+                }
+                else
+                {
+                    break;
+                }
+                current1 = current1.Next;
+            }
+            max = this;
+            while (current2.Next != null)
+            {
+                tmp1 = Convert.ToInt32(current2.Value);
+                tmp2 = Convert.ToInt32(current2.Next.Value);
+                if (tmp2 - tmp1 == 1)
+                {
+                    count2++;
+                }
+                else if(tmp2-tmp1>1)
+                {
+                    break;
+                }
+                current2 = current2.Next;
+            }
+            if (count2 > count1)
+            {
+                max = L2;
+            }
+            while (current3.Next != null)
+            {
+                tmp1 = Convert.ToInt32(current3.Value);
+                tmp2 = Convert.ToInt32(current3.Next.Value);
+                if (tmp2 - tmp1 == 1)
+                {
+                    count3++;
+                }
+                else
+                {
+                    break;
+                }
+                current3 = current3.Next;
+            }
+            if (count3 > count2)
+            {
+                max = L3;
+            }
+            max.PrintList();
+            
+        }
         public void PrintList()
         {
             LinkedListNode<T> current = head;
@@ -155,16 +217,19 @@ namespace lab1
         }
         public void Add(T value)
         {
+
+            var node = new LinkedListNode<T>(value);
             if (head == null)
             {
-                head = tail = new LinkedListNode<T>(value, null);
-                count++;
+                head = node;
             }
             else
             {
-                AddAfter(tail, value);
-                tail = tail.Next;
+                tail.Next = node;
             }
+
+            tail = node;
+            count++;
         }
         public LinkedListNode<T> Search(T value)
         {

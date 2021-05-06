@@ -1,2 +1,7 @@
 E:\Atsd labs git\lab1\lab1\obj\Debug\lab1.csprojAssemblyReference.cache
 E:\Atsd labs git\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
+E:\Atsd labs git\lab1\lab1\bin\Debug\lab1.exe.config
+E:\Atsd labs git\lab1\lab1\bin\Debug\lab1.exe
+E:\Atsd labs git\lab1\lab1\bin\Debug\lab1.pdb
+E:\Atsd labs git\lab1\lab1\obj\Debug\lab1.exe
+E:\Atsd labs git\lab1\lab1\obj\Debug\lab1.pdb

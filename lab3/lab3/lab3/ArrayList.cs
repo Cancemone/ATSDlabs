@@ -35,5 +35,14 @@ namespace lab3
             array[++last] = item;
 
         }
+        private void Resize(ref T[] array, int leng)
+        {
+            T[] array2 = new T[leng];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array2[i] = array[i];
+            }
+            array = array2;
+        }
     }
 }

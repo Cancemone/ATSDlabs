@@ -49,4 +49,28 @@ namespace Lab4
             Console.WriteLine();
         }
     }
-}
+    public void Kruskal()
+    {
+
+        int[] nodes = new int[100];
+        int last_n = 0;
+
+        for (var i = 0; i < vertices; i++)
+        {
+            nodes[i] = -1 - i;
+        }
+
+        var sVes = from h in edges orderby h.weight select h;
+        foreach (var s in sVes)
+        {
+            for (var i = 0; i < num_edges; i++)
+            { // пока не прошли все ребра
+                int c = getColor(s.y);
+                if (getColor(s.x) != c)
+                {
+                    nodes[last_n] = s.y;
+                    Console.WriteLine(s.x + " " + s.y);
+                }
+            }
+        }
+    }

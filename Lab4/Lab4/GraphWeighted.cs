@@ -73,4 +73,16 @@ namespace Lab4
                 }
             }
         }
+        int getColor(int n)
+        {
+            int c;
+            if (nodes[n] < 0)
+            {
+                return nodes[last_n = n];
+            }
+            c = getColor(nodes[n]);
+            nodes[n] = last_n;
+            return c;
+        }
     }
+}

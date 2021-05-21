@@ -188,7 +188,7 @@ namespace Lab4
 
             for (int i = 1; i < vertices; i++)
             {
-                arr.AddItem(((parent[i] + 1) + " " + (i + 1)).ToString());
+                arr.AddNode(((parent[i] + 1) + " " + (i + 1)).ToString());
             }
         }
     }
